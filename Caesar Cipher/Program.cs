@@ -20,7 +20,7 @@ namespace CaesarCipher
                 if (char.IsLetter(letter)) // Check if the character is a letter
                 {
                     int letterPosition = Array.IndexOf(alphabet, letter);
-                    // Burada alfabeyi modunu alarak tekrardan ayni sekilde alfabeye donmesini sagliyoruz.
+                    // Using modulo operator for looping alphabet
                     int newLetterPosition = (letterPosition + 3) % 26;
                     char letterEncoded = alphabet[newLetterPosition];
                     encryptedMessage[i] = letterEncoded;
